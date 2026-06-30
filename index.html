@@ -330,6 +330,12 @@
     .theme-5 .exp-num  { color: #7b1fa2; }
     .theme-6 .exp-icon { background: #e8eaf6; }
     .theme-6 .exp-num  { color: #3949ab; }
+    .theme-7 .exp-icon { background: #fce4ec; }
+    .theme-7 .exp-num  { color: #c2185b; }
+    .theme-8 .exp-icon { background: #e0f2f1; }
+    .theme-8 .exp-num  { color: #00695c; }
+    .theme-9 .exp-icon { background: #fff8e1; }
+    .theme-9 .exp-num  { color: #f57f17; }
 
     /* ─── MODAL ───────────────────────────────────────────── */
     .modal-overlay {
@@ -523,7 +529,7 @@
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="hero-stat-num">6</div>
+      <div class="hero-stat-num">9</div>
       <div class="hero-stat-label">Experiments</div>
     </div>
     <div class="hero-stat">
@@ -913,6 +919,99 @@ const experiments = [
       "How could temperature data logging be used by Malaysian farmers to improve crop yield?",
       "How is global temperature monitoring used by scientists to study climate change?",
       "Design an improved version of this experiment that could run for one full week. What challenges would you face and how would you overcome them?"
+    ]
+  },
+  {
+    id: 7,
+    theme: "theme-7",
+    icon: "🔌",
+    title: "Know Your micro:bit",
+    shortDesc: "Identify sensors and actuators on the micro:bit; understand the role of the microcontroller.",
+    subject: "Design & Technology",
+    forms: ["Standard 6 D&T – Ch 2"],
+    chapters: ["Chapter 2: Elements in an Electronic System (Standard 6)"],
+    tags: ["D&T", "Standard 6", "Sensors", "Actuators", "Embedded Systems"],
+    objectives: [
+      "Identify the sensors and actuators on a micro:bit.",
+      "Differentiate between input (sensor) and output (actuator) components.",
+      "Describe the role of the microcontroller in an embedded system."
+    ],
+    steps: [
+      "Hold your micro:bit and observe both sides. Can you spot the LED grid, buttons, and the edge connector pins?",
+      "Using the diagram provided, label each component as either a <strong>sensor (input)</strong> or <strong>actuator (output)</strong>.",
+      "Open the micro:bit Apps platform and load the <strong>Sensor Explorer</strong> app onto your micro:bit.",
+      "Tilt the board — watch how the LED display reacts to movement. This is the <strong>accelerometer</strong> (sensor) controlling the <strong>LED matrix</strong> (actuator).",
+      "Cover the front of the board with your hand and observe the display change — this is the <strong>light sensor</strong> at work.",
+      "Press Button A and Button B and record what happens on the display.",
+      "Complete the table: list at least <strong>4 sensors</strong> and <strong>3 actuators</strong> found on the micro:bit."
+    ],
+    conclusion: "The micro:bit is a miniature embedded system. It contains multiple sensors (inputs) — including an accelerometer, light sensor, temperature sensor, compass, and buttons — and actuators (outputs) such as the LED matrix, buzzer, and radio transmitter. The microcontroller (processor) sits at the centre, reading data from sensors and sending commands to actuators based on its program. This is the same architecture found in smartphones, washing machines, and cars.",
+    questions: [
+      "What is the difference between a sensor and an actuator? Give one example of each from the micro:bit.",
+      "The micro:bit has a built-in thermometer. Is this a sensor or an actuator? Explain your answer.",
+      "Can you think of a real-world device (like a phone or washing machine) that also uses sensors and actuators? Describe how they work together."
+    ]
+  },
+  {
+    id: 8,
+    theme: "theme-8",
+    icon: "💻",
+    title: "My First Algorithm",
+    shortDesc: "Program the micro:bit with MicroCode — use variables and conditions to build a button counter.",
+    subject: "Design & Technology",
+    forms: ["Standard 6 D&T – Ch 2", "Form 1 D&T – Ch 3"],
+    chapters: ["Chapter 2: Elements in an Electronic System (Standard 6)", "Chapter 3: Development of Algorithm (Form 1)"],
+    tags: ["D&T", "Standard 6", "Form 1", "Algorithm", "MicroCode", "Conditions"],
+    objectives: [
+      "Understand the concept of an algorithm and represent it as a sequence of logical steps.",
+      "Implement a conditional structure to compare values and respond to input.",
+      "Interact with the actuators — LED display and buzzer — using programmed logic."
+    ],
+    steps: [
+      "Open <strong>MicroCode</strong> on your micro:bit. Create a variable called <strong>A</strong> and set its starting value to <code>0</code>.",
+      "Add a rule: every time <strong>Button A</strong> is pressed, increase variable A by <code>1</code> and show its current value on the LED display.",
+      "Create a second variable called <strong>B</strong>, also starting at <code>0</code>. When <strong>Button B</strong> is pressed, increase variable B by <code>1</code> and show its value.",
+      "Add a comparison rule: after each button press, check which variable is greater — display <code>"A"</code> if A &gt; B, display <code>"B"</code> if B &gt; A, or display <code>"="</code> if they are the same.",
+      "<strong>Challenge:</strong> Add a third rule — when the <strong>logo is touched</strong>, play a short melody using the buzzer.",
+      "Pair up with a classmate and compare your programs. Did you use the same blocks and logic? Were there different ways to achieve the same result?"
+    ],
+    conclusion: "This experiment demonstrates three fundamental algorithmic structures: sequence (steps happen in order), selection (conditions decide which path to take), and the use of variables to store changing data. Writing a program is essentially writing an algorithm — a precise, step-by-step set of instructions. The same logic structures used here appear in every programming language, from MicroCode on a micro:bit to Python, JavaScript, and beyond.",
+    questions: [
+      "Before you started coding, could you write out the steps of your program in plain English? What do we call this kind of step-by-step plan?",
+      "What type of algorithm structure did you use when comparing variables A and B — sequence, loop, or selection? Explain your choice.",
+      "What happened when both variables were equal? How did your program handle that case, and why is it important to plan for all possible outcomes?"
+    ]
+  },
+  {
+    id: 9,
+    theme: "theme-9",
+    icon: "📡",
+    title: "Radio Communication",
+    shortDesc: "Program radio communication between two micro:bits, then design and present your own mini-project.",
+    subject: "Design & Technology",
+    forms: ["Standard 6 D&T – Ch 3"],
+    chapters: ["Chapter 3: Combinations of Technology (Standard 6)"],
+    tags: ["D&T", "Standard 6", "Radio", "Communication", "Design Challenge"],
+    objectives: [
+      "Be creative in combining sensors, actuators, and programming skills from previous experiments.",
+      "Program radio communication between two micro:bit devices.",
+      "Present and communicate a self-designed micro:bit project to the class."
+    ],
+    steps: [
+      "Work in pairs — each person holds one micro:bit.",
+      "In MicroCode, set <strong>both</strong> micro:bits to the same radio group number (e.g., group <code>1</code>) using the radio set group block.",
+      "On <strong>Device A (transmitter)</strong>: add a block so that when Button A is pressed, it sends the text <code>"Hello!"</code> via radio.",
+      "On <strong>Device B (receiver)</strong>: add an <code>on radio received</code> block that displays the incoming message on the LED screen.",
+      "Flash both programs. Press Button A on Device A — does Device B react?",
+      "<strong>Extend it:</strong> modify Device A to also send the current <strong>temperature</strong> reading. Display it on Device B as a number.",
+      "<strong>Design challenge (15 min):</strong> In your pair, design a mini-project using radio and at least one sensor. Ideas: a wireless doorbell, a two-player quiz buzzer, or a plant monitor that sends an alert. Sketch your idea on paper.",
+      "Present your design to the class — explain what problem it solves, what sensors/actuators you used, and how radio connects the two devices."
+    ],
+    conclusion: "Radio communication allows two micro:bits to exchange data wirelessly by transmitting and receiving signals on a shared radio group (channel). This mirrors how real wireless systems work — from Wi-Fi and Bluetooth to weather stations and IoT devices. Combining radio with other sensors and actuators opens up endless design possibilities. This experiment challenges students to think like engineers: identifying a real problem, designing a solution, building it, and communicating their ideas.",
+    questions: [
+      "What radio group number did you use? Why is it important that both micro:bits share the same group?",
+      "How is radio communication similar to, and different from, a wired connection between two devices?",
+      "Describe the project you designed. What would you improve if you had more time?"
     ]
   }
 ];
